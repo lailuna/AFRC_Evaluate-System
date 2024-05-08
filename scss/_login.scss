@@ -1,0 +1,65 @@
+// ***login.scss
+.login_bg {
+    background: url(../img/login_bg.png) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login_content {
+        min-width: 400px;
+        padding: 50px;
+        text-align: center;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        .title {
+            font-size: 1.71rem;
+            margin: 25px 0;
+            line-height: 1.5;
+
+            .system_name {
+                font-weight: bold;
+            }
+        }
+
+        .login_form {
+            font-size: 0.87rem;
+
+            .login_enter {
+
+                .enter_item {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    label {
+                        display: block;
+                        text-align: left;
+                        margin-bottom: 8px;
+                    }
+
+                    input {
+                        width: 100%;
+                        border: 0;
+                        background-color: $gray;
+                        border-radius: 8px;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .btn_login {
+                display: block;
+                background-color: $primary-color;
+                border-radius: 8px;
+                color: #fff !important;
+                margin-top: 30px;
+                padding: 12px;
+            }
+        }
+    }
+}

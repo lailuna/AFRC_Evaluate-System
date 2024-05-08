@@ -1,0 +1,92 @@
+.topbar {
+    box-shadow: 0.5px 0px 0px rgba(0, 0, 0, 0.15);
+    background-color: $primary-color;
+
+    .topbar_content {
+        align-items: center;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                max-height: 80px;
+                margin-right: 20px;
+                padding: 10px;
+            }
+
+            .logo_title {
+                font-size: 24px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+
+        .menu_section {
+
+            .topbar_menu {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                z-index: 1;
+
+                .firstFloor {
+                    display: inline-block;
+                    position: relative;
+                    min-width: 180px;
+
+                    .menu_item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: #fff;
+                        padding: 15px;
+
+                        .item_icon {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                        }
+
+                        .item_name {
+                            font-weight: bold;
+
+                        }
+                    }
+                }
+
+                .secondFloor {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+
+                    .secondFloor_item {
+                        background-color: $primary-color;
+                        font-weight: bold;
+                        z-index: 9999;
+                        line-height: 1.5;
+                        position: relative;
+
+                        &:hover {
+                            opacity: .8;
+                        }
+
+                        a {
+                            display: block;
+                            color: #fff;
+                            padding: 10px;
+                        }
+                    }
+                }
+
+                .firstFloor:hover .secondFloor{
+                    display: block;
+                }
+            }
+        }
+
+        .user_data{
+            color: #fff;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,440 @@
+
+ .content_inner {
+     .left {
+
+         .sidebar {
+             background-color: #fff;
+             box-shadow: $box-shadow;
+             padding: 10px 0;
+
+             .sidebar_title {
+                 padding: 20px;
+                 position: relative;
+
+                 h3 {
+                     font-weight: bold;
+                     font-size: 1.25rem;
+                 }
+             }
+
+             .firstfloor {
+                 .firstfloor_item {
+
+                     .firstfloor_link {
+                         display: block;
+                         padding: 15px 20px;
+                         font-size: 0.87rem;
+                         border-right: 3px solid transparent;
+
+                         &:hover {
+                             background-color: #DFF2F2;
+                             border-right: 3px solid $primary-color;
+                         }
+                     }
+
+                     .firstfloor_link {
+                         position: relative;
+
+                         .icon {
+                             position: absolute;
+                             right: 15px;
+                             transition: $transition;
+                         }
+
+                         &.active {
+                             .icon {
+                                 transform: rotate(180deg);
+                             }
+                         }
+                     }
+                 }
+             }
+
+             .secondfloor {
+                 display: none;
+
+                 .secondfloor_link {
+                     display: block;
+                     padding: 15px 20px;
+                     font-size: 0.87rem;
+                     text-indent: 2rem;
+                     border-right: 3px solid transparent;
+
+                     &:hover {
+                         background-color: #DFF2F2;
+                         border-right: 3px solid $primary-color;
+                     }
+                 }
+             }
+
+             .thirdfloor {
+                 display: none;
+
+                 .thirdfloor_link {
+                     display: block;
+                     padding: 15px 20px;
+                     font-size: 0.87rem;
+                     text-indent: 2rem;
+                     border-right: 3px solid transparent;
+
+                     &:hover {
+                         background-color: #DFF2F2;
+                         border-right: 3px solid $primary-color;
+                     }
+                 }
+             }
+         }
+
+         .article_data {
+             .data_date {
+                 color: $gray;
+                 margin-bottom: 8px;
+             }
+
+             .data_mark {
+                 display: inline-block;
+                 background-color: $primary_color;
+                 padding: 12px;
+                 border-radius: 0 0 10px 0;
+                 color: #fff;
+                 font-size: 0.87rem;
+             }
+         }
+     }
+
+     .right {
+
+         // 文章
+         .article {
+             .article_content {
+                 p {
+                     line-height: 1.5;
+
+                     &:not(:last-child) {
+                         margin-bottom: 20px;
+                     }
+                 }
+
+                 .article_list {
+                     &:not(:last-child) {
+                         margin-bottom: 25px;
+                     }
+
+                     .list_title {
+                         font-size: 1.12rem;
+                         font-weight: bold;
+                         margin-bottom: 10px;
+                     }
+
+                     .list_item {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         border: 1px solid #dde1e3;
+                         border-radius: 4px;
+                         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+                         padding: 15px 30px;
+
+                         &:not(:last-child) {
+                             margin-bottom: 10px;
+                         }
+
+                         &.link {
+                             a {
+                                 color: $primary-color;
+                                 text-decoration: underline;
+                                 text-underline-offset: 2px;
+                             }
+                         }
+
+                         .icon {
+                             margin-right: 8px;
+                         }
+
+                         //  表單下載頁面
+                         .downloadFormat {
+                             display: flex;
+                             flex-wrap: wrap;
+                             justify-content: end;
+
+                             .downloadFormat_item {
+                                 margin: 5px 0;
+                                 padding: 0 10px;
+
+                                 &:not(:last-child) {
+                                     border-right: 1px solid #D7D7D7;
+                                 }
+
+                                 .downloadFormat_link {
+                                     display: inline-block !important;
+                                 }
+                             }
+                         }
+                     }
+                 }
+
+                 .article_item {
+                     &:not(:last-child) {
+                         margin-bottom: 20px;
+                     }
+
+                     .title {
+                         font-size: 1.25rem;
+                         font-weight: bold;
+                         margin-bottom: 15px;
+                     }
+
+                     // 座右銘
+                     .motto {
+                         background-color: #F9F9F9;
+                         text-align: center;
+                         font-size: 1.25rem;
+                         font-weight: bold;
+                         padding: 30px 0;
+                         margin-top: 40px;
+                     }
+                 }
+
+                 //  文字
+                 .article_text {
+                     p {
+                         margin-bottom: 1rem;
+                     }
+                 }
+
+                 //  圖片
+                 .article_img {
+                     .img_item {
+                         height: 200px;
+
+                         &:not(:last-child) {
+                             margin-bottom: 1rem;
+                         }
+                     }
+                 }
+
+                 //  附件
+                 .article_attached {
+                     background-color: #F9F9F9;
+                     padding: 15px;
+                     margin-top: 20px;
+                 }
+
+                 .detail_title {
+                     display: block;
+                     font-size: 1.12rem;
+                     font-weight: bold;
+                 }
+
+                 //  頁籤
+                 .tab_List {
+                     border-bottom: 3px solid rgba(130, 130, 130, 0.45);
+
+                     .nav-link {
+                         border-bottom: 3px solid transparent;
+                         margin-bottom: -3px;
+                         font-size: 0.87rem;
+
+                         &.active {
+                             color: $primary-color;
+                             background-color: #fff;
+                             border-bottom: 3px solid $primary-color;
+                             border-radius: 0;
+                         }
+                     }
+                 }
+
+                 //  頁籤內容
+                 .tab-content {
+                     .tabcontent_title {
+                         display: block;
+                         font-size: 1.12rem;
+                     }
+                 }
+             }
+         }
+
+         .table {
+             .thead {
+                 background-color: #f9f9f9;
+             }
+
+             .tbody_item {
+                 font-size: 0.87rem;
+                 border: 1px solid #dde1e3;
+                 border-radius: 4px;
+                 display: grid;
+                 align-items: center;
+                 margin-bottom: 15px;
+                 padding: 10px;
+             }
+         }
+     }
+ }
+
+ // 文章
+ .article {
+     .article_content {
+         p {
+             line-height: 1.5;
+
+             &:not(:last-child) {
+                 margin-bottom: 20px;
+             }
+         }
+
+         .article_list {
+             &:not(:last-child) {
+                 margin-bottom: 25px;
+             }
+
+             .list_title {
+                 font-size: 1.12rem;
+                 font-weight: bold;
+                 margin-bottom: 10px;
+             }
+
+             .list_item {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 border: 1px solid #dde1e3;
+                 border-radius: 4px;
+                 box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+                 padding: 15px 30px;
+
+                 &:not(:last-child) {
+                     margin-bottom: 10px;
+                 }
+
+                 &.link {
+                     a {
+                         color: $primary-color;
+                         text-decoration: underline;
+                         text-underline-offset: 2px;
+                     }
+                 }
+
+                 .icon {
+                     margin-right: 8px;
+                 }
+
+                 //  表單下載頁面
+                 .downloadFormat {
+                     display: flex;
+                     flex-wrap: wrap;
+                     justify-content: end;
+
+                     .downloadFormat_item {
+                         margin: 5px 0;
+                         padding: 0 10px;
+
+                         &:not(:last-child) {
+                             border-right: 1px solid #D7D7D7;
+                         }
+
+                         .downloadFormat_link {
+                             display: inline-block !important;
+                         }
+                     }
+                 }
+             }
+         }
+
+         .article_item {
+             &:not(:last-child) {
+                 margin-bottom: 20px;
+             }
+
+             .title {
+                 font-size: 1.25rem;
+                 font-weight: bold;
+                 margin-bottom: 15px;
+             }
+
+             // 座右銘
+             .motto {
+                 background-color: #F9F9F9;
+                 text-align: center;
+                 font-size: 1.25rem;
+                 font-weight: bold;
+                 padding: 30px 0;
+                 margin-top: 40px;
+             }
+         }
+
+         //  文字
+         .article_text {
+             p {
+                 margin-bottom: 1rem;
+             }
+         }
+
+         //  圖片
+         .article_img {
+             .img_item {
+                 height: 200px;
+
+                 &:not(:last-child) {
+                     margin-bottom: 1rem;
+                 }
+             }
+         }
+
+         //  附件
+         .article_attached {
+             background-color: #F9F9F9;
+             padding: 15px;
+             margin-top: 20px;
+         }
+
+         .detail_title {
+             display: block;
+             font-size: 1.12rem;
+             font-weight: bold;
+         }
+
+         //  頁籤
+         .tab_List {
+             border-bottom: 3px solid rgba(130, 130, 130, 0.45);
+
+             .nav-link {
+                 border-bottom: 3px solid transparent;
+                 margin-bottom: -3px;
+                 font-size: 0.87rem;
+
+                 &.active {
+                     color: $primary-color;
+                     background-color: #fff;
+                     border-bottom: 3px solid $primary-color;
+                     border-radius: 0;
+                 }
+             }
+         }
+
+         //  頁籤內容
+         .tab-content {
+             .tabcontent_title {
+                 display: block;
+                 font-size: 1.12rem;
+             }
+         }
+     }
+
+     .article_order {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 20px;
+         position: relative;
+
+         .order_item {
+             display: flex;
+             align-items: center;
+
+             .icon {
+                 margin: 0 5px;
+                 font-size: 1.25rem;
+             }
+         }
+     }
+ }

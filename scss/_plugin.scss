@@ -1,0 +1,67 @@
+// ***plugin.scss
+.ckeditor {
+    max-width: 80%;
+}
+
+// multiselect
+.multiSelectList_header {
+    border: 1px solid #dde1e3;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.fc-event-title {
+    font-size: 16px;
+}
+
+.fc-day {
+    height: 150px;
+}
+
+// slick
+.slick-prev,
+.slick-next {
+    width: 25px;
+    height: 25px;
+    background-color: #4AAEAE;
+    border-radius: 50%;
+    z-index: 999;
+    top: 20px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    background: #4AAEAE;
+}
+
+.slick-prev {
+    left: 5px !important;
+
+    &::before {
+        content: '<';
+        font-size: 16px;
+    }
+}
+
+.slick-next {
+    right: 5px !important;
+
+    &::before {
+        content: '>';
+        font-size: 16px;
+    }
+}
+
+.slick-list{
+    height: 100%;
+}
+
+.slick-track{
+    height: 100%;
+}
