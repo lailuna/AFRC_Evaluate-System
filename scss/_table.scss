@@ -1,11 +1,11 @@
 .table {
-    a {
-        color: unset;
-        text-decoration: underline;
-    }
 
-    .thead {
-        background-color: #f9f9f9;
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+            }
+        }
     }
 
     .tbody_item {
@@ -15,5 +15,19 @@
         padding: 15px;
         border: 1px solid #dde1e3;
         border-radius: 4px;
+    }
+}
+
+.table-bordered {
+    border: 1px solid $gray;
+
+    thead th {
+        border-bottom: 0;
+        background-color: #EAEAEA;
+        text-align: center;
+    }
+
+    td {
+        background-color: #fff;
     }
 }

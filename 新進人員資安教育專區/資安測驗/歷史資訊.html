@@ -69,60 +69,36 @@
         <div class="contentSection">
             <div class="contentSection_item">
                 <div class="header">
-                    <div class="title">民網帳號異動申請單</div>
+                    <div class="title">資安測驗-歷史資訊</div>
                 </div>
                 <div class="content">
-                    <form action="">
-                        <div class="form-row form_item">
-                            <div class="col-md-4">
-                                <div class="radio_section">
-                                    <div class="radio_inline">
-                                        <div class="radio_item">
-                                            <input type="radio" id="add" name="enable">
-                                            <label for="add">新增</label>
-                                        </div>
-                                        <div class="radio_item">
-                                            <input type="radio" id="delete" name="enable">
-                                            <label for="delete">刪除</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="unit">單位</label>
-                                <input type="text" class="form-control w-100" id="unit">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="job">職務階級</label>
-                                <input type="text" class="form-control w-100" id="job">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="name">姓名</label>
-                                <input type="text" class="form-control w-100" id="name">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="account">帳號</label>
-                                <input type="text" class="form-control w-100" id="account">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="reason">原因</label>
-                                <input type="text" class="form-control w-100" id="reason">
-                            </div>
-                        </div>
-                        <div class="form_btn">
-                            <button type="submit" class="btn_item btn_primary">儲存</button>
-                        </div>
-                    </form>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">單位名稱</th>
+                                <th scope="col">測驗日期</th>
+                                <th scope="col">分數</th>
+                                <th scope="col">合格與否</th>
+                                <th scope="col">資安測驗</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>後勤處</td>
+                                <td>2024-01-05</td>
+                                <td>80</td>
+                                <td>合格</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>動管處</td>
+                                <td>尚未進行測驗</td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="考試.html" class="btn_item btn_secondary_danger">進入</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

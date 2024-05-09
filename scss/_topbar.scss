@@ -44,12 +44,11 @@
 
                         .item_icon {
                             font-size: 24px;
-                            margin-bottom: 10px;
+                            margin-bottom: 15px;
                         }
 
                         .item_name {
-                            font-weight: bold;
-
+                            font-size: 18px;
                         }
                     }
                 }
@@ -78,15 +77,21 @@
                     }
                 }
 
-                .firstFloor:hover .secondFloor{
+                .firstFloor:hover .secondFloor {
                     display: block;
                 }
             }
         }
 
-        .user_data{
+        .user_data {
+            display: flex;
+            justify-content: end;
+            align-items: center;
             color: #fff;
-            text-align: right;
+
+            .signout {
+                margin-left: 15px;
+            }
         }
     }
 }

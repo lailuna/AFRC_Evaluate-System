@@ -8,9 +8,6 @@
     }
 
     .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 20px;
 
         .title {
@@ -21,107 +18,79 @@
     }
 
     .content {
-        &:not(:last-child) {
-            margin-bottom: 15px;
+        .content_box {
+            border: 1px solid $gray;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            padding: 20px;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title {
+                    font-size: 18px;
+                    border-left: 0;
+                    padding: 0;
+                }
+            }
+
+            .content {
+                .form_item {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
         }
 
         form {
-            .form-row {
-                display: flex;
-                flex-wrap: wrap;
-                margin-right: -5px;
-                margin-left: -5px;
-            }
-
-            .form-row>.col,
-            .form-row>[class*=col-] {
-                padding-right: 5px;
-                padding-left: 5px;
-            }
-
-            .form-inline {
-                display: flex;
-                flex-flow: row wrap;
-                align-items: center;
-            }
-
-            .form-control {
-                border: 1px solid #B9B9B9;
-            }
-        }
-
-        .form_item {
-            align-items: flex-end;
-
-            &:not(:last-child) {
+            .form_group {
                 margin-bottom: 20px;
-            }
 
-            label {
-                margin-bottom: 8px;
-                font-weight: bold;
-            }
-
-            textarea {
-                display: block;
-                border: 1px solid #828282;
-                border-radius: 4px;
-                resize: none;
-            }
-
-            .textarea_gray {
-                background-color: #f5f5f5;
-                border: 0;
-            }
-
-            // inline
-            .item_inline {
-                display: flex;
-                align-items: center;
-
-                &:not(:last-child) {
-                    margin-bottom: 15px;
-                }
-
-                label {
+                .form_item{
                     margin-bottom: 0;
                 }
             }
 
-            // form裡面的input block
-            .form-control {
-                background-color: #fff;
-                border-radius: 4px;
-                font-size: 14px;
-            }
-        }
+            .form_item {
+                margin-bottom: 20px;
 
-        .form-inline {
-            .form-control {
-                &:not(:last-child) {
-                    margin-right: 10px;
+                label {
+                    margin-bottom: 8px;
+                    font-weight: bold;
+                }
+    
+                // inline
+                .item_inline {
+                    display: flex;
+                    align-items: center;
+    
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+    
+                    label {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .item_range{
+                    display: flex;
+                    align-items: center;
                 }
             }
 
-            label {
-                margin-bottom: 0;
+            .form-control {
+                border: 1px solid $gray;
+                border-radius: 4px;
+                padding: 5px 10px;
             }
         }
     }
 }
 
 // --------------------------------------------
-
-// 必填資料
-.required {
-    color: $danger;
-}
-
-// 備註文字
-.remark_text {
-    color: $danger;
-    margin-top: 5px;
-}
 
 // 分頁
 .pagination {
@@ -143,7 +112,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #d9d9d9;
+        border: 1px solid $gray;
         border-radius: 0 !important;
         padding: 0.5rem;
         color: $text-primary;
@@ -157,130 +126,8 @@
     }
 }
 
-// --------------------------------------------
-
-//  頁籤
-.tab_List {
-    margin-bottom: 25px;
-
-    .tab_item {
-        display: flex;
-        align-items: center;
-
-        &.has_active {
-            border-bottom: 2px solid $primary-color;
-            margin-bottom: -2px;
-        }
-    }
-
-    .nav-link {
-        border-bottom: 2px solid transparent;
-        margin-bottom: -2px;
-        padding: .6rem .8rem;
-        color: $text-primary;
-        border-radius: 0;
-
-        &.active {
-            color: $primary-color;
-            background-color: #fff;
-            border-bottom: 2px solid $primary-color;
-            border-radius: 0;
-            font-weight: bold;
-        }
-
-        .icon {
-            margin-left: 10px;
-            font-size: 0.5rem;
-            display: none;
-        }
-    }
-}
-
-//  頁籤內容
-.tab-content {
-    .contentSection_header {
-        .title {
-            margin-bottom: 0;
-        }
-    }
-}
-
 // -------------------------------------------
 
-.select_gray {
-    background-color: $gray;
-    border: 0;
-    border-radius: 8px;
-    min-height: 38px;
-    color: #7D8997;
-}
-
-.selectSection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-
-    select {
-        min-width: 300px;
-    }
-}
-
-// -------------------------------------------
-::placeholder {
-    color: #7D8997;
-}
-
-// -------------------------------------------
-// checkbox區塊
-.ckeckbox_section {
-    &:not(:last-child) {
-        margin-bottom: 15px;
-    }
-}
-
-// checkbox項目
-.checkbox_item {
-    display: flex;
-    align-items: center;
-
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
-
-    input[type="checkbox"] {
-        margin-right: 5px;
-    }
-
-    label {
-        margin-bottom: 0 !important;
-        min-width: 50px;
-        white-space: nowrap;
-    }
-}
-
-.checkbox_inline {
-    display: flex;
-    align-items: center;
-
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    &.flex-wrap {
-        .checkbox_item {
-            margin-bottom: 15px;
-        }
-    }
-}
-
-.checkbox:checked:before {
-    background-color: green;
-}
-
-
-
-// -------------------------------------------
 // radio區塊
 .radio_section {
     .radio_inline {
@@ -298,4 +145,59 @@
             margin-bottom: 0 !important;
         }
     }
+}
+
+// checkbox區塊
+.ckeckbox_section {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .checkbox_inline {
+        display: flex;
+        align-items: center;
+    
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    
+        &.flex-wrap {
+            .checkbox_item {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .checkbox_item {
+        display: flex;
+        align-items: center;
+    
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    
+        label {
+            margin-bottom: 0 !important;
+            min-width: 50px;
+            white-space: nowrap;
+        }
+    }
+}
+
+::placeholder {
+    color: #7D8997;
+}
+
+// 必填
+.required{
+    color: $danger;
+}
+
+// 項目置中
+.item_center{
+    text-align: center;
 }

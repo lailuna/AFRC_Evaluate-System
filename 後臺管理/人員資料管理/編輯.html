@@ -69,58 +69,49 @@
         <div class="contentSection">
             <div class="contentSection_item">
                 <div class="header">
-                    <div class="title">民網帳號異動申請單</div>
+                    <div class="title">人員資料管理-編輯</div>
                 </div>
                 <div class="content">
                     <form action="">
                         <div class="form-row form_item">
-                            <div class="col-md-4">
-                                <div class="radio_section">
-                                    <div class="radio_inline">
-                                        <div class="radio_item">
-                                            <input type="radio" id="add" name="enable">
-                                            <label for="add">新增</label>
-                                        </div>
-                                        <div class="radio_item">
-                                            <input type="radio" id="delete" name="enable">
-                                            <label for="delete">刪除</label>
-                                        </div>
-                                    </div>
+                            <div class="col-md-3">
+                                <label for="name"><span class="required">*</span>姓名</label>
+                                <input type="text" class="form-control w-100" id="name" required>
+                            </div>
+                        </div>
+                        <div class="form-row form_item">
+                            <div class="col-md-3">
+                                <label for="account"><span class="required">*</span>帳號</label>
+                                <input type="text" class="form-control w-100" id="account" required>
+                            </div>
+                        </div>
+                        <div class="form-row form_item">
+                            <div class="col-md-3">
+                                <label for="unit"><span class="required">*</span>單位名稱</label>
+                                <div>
+                                    <select name="unit" id="" class="w-100" required>
+                                        <option value="">請選擇</option>
+                                        <option value="">後勤處</option>
+                                        <option value="">動管處</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row form_item">
                             <div class="col-md-3">
-                                <label for="unit">單位</label>
-                                <input type="text" class="form-control w-100" id="unit">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="job">職務階級</label>
-                                <input type="text" class="form-control w-100" id="job">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="name">姓名</label>
-                                <input type="text" class="form-control w-100" id="name">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="account">帳號</label>
-                                <input type="text" class="form-control w-100" id="account">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="reason">原因</label>
-                                <input type="text" class="form-control w-100" id="reason">
+                                <label for="permission"><span class="required">*</span>職務操作權限</label>
+                                <div>
+                                    <select name="" id="permission" class="w-100" required>
+                                        <option value="">請選擇</option>
+                                        <option value="">機關管理者</option>
+                                        <option value="">單位管理者</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="form_btn">
                             <button type="submit" class="btn_item btn_primary">儲存</button>
+                            <a href="人員資料管理.html" class="btn_item btn_primary_gray">返回</a>
                         </div>
                     </form>
                 </div>

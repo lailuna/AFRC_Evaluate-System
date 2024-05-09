@@ -1,21 +1,31 @@
-.btn_style {
+.btn_item {
     display: inline-block;
     font-size: 14px;
     text-align: center;
-    cursor: pointer;
     transition: $transition;
+    cursor: pointer;
 }
 
 .form_btn {
-    .btn_style {
+    .btn_item {
         &:not(:last-child) {
             margin-right: 20px;
         }
     }
+
+    .operateBtn {
+        padding: 8px 10px;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        background-color: #fff;
+    }
 }
 
+
 // ------------
-.btn_primary_blue {
+
+.btn_primary {
     background-color: $primary-color;
     border: 1px solid $primary-color;
     color: #fff;
@@ -26,16 +36,16 @@
 
 .btn_primary_gray {
     background-color: #F5F5F5;
-    border: 1px solid #C4C4C4;
+    border: 1px solid $gray;
     color: $text-primary;
     min-width: 160px;
     border-radius: 5px;
     padding: 10px;
 }
 
-.btn_primary_gray_danger {
+.btn_primary_danger {
     background-color: #F5F5F5;
-    border: 1px solid #C4C4C4;
+    border: 1px solid $gray;
     color: $danger;
     min-width: 160px;
     border-radius: 5px;
@@ -43,12 +53,11 @@
 }
 
 // ------------
+
 .btn_secondary {
     background-color: #F9F9F9;
     border-radius: 4px;
-    border: 1px solid #d5d5d5;
-    color: #153162;
-    min-height: 35px;
+    border: 0;
     padding: 8px 15px;
 
     &:disabled {
@@ -60,30 +69,12 @@
     }
 }
 
-// ------------
-
-.btn_text {
-    color: $primary-color;
-    border: 0;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-// ------------
-.btn_icon {
-    border: 1px solid $primary-color;
-    background-color: #DFF2F2;
+.btn_secondary_danger {
+    background-color: #FFE3E3;
     border-radius: 4px;
-    color: $primary-color !important;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-
-    &.btn_add_theme {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+    border: 1px solid $danger;
+    color: $danger;
+    padding: 8px 15px;
 }
 
 // ------------
@@ -98,109 +89,16 @@
     width: fit-content;
 }
 
-// 上傳照片
-.btn_upload_photo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $gray;
-    border-radius: 8px;
-    border: 1px dashed #BDBDBD;
-    padding: 10px;
-    width: 400px;
-    min-height: 180px;
-
-    .text_upload_photo {
-        font-size: 1.28rem;
-        font-weight: bold;
-        margin-top: 15px;
-    }
-}
-
-// 編輯主題
-.btn_edit_theme {
-    color: $primary-color;
-    display: none;
-}
-
-// 上傳_刪除按鈕
-.btn_deletefile {
-    margin-left: 15px;
-    border-radius: 50%;
-    border: 0;
-    padding: 8px;
-    background-color: $danger;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-}
-
-// 上傳圖片
-.uploadImg_section {
-    display: flex;
-    align-items: center;
-
-    .btn_uploadImg {
-        border: 1px dashed #828282;
-        padding: 20px 40px;
-        margin-right: 15px;
-        margin-bottom: 0 !important;
-        background-color: #F5F5F5;
-        border-radius: 4px;
-
-        .icon {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-    }
-
-    // 圖片項目
-    .img_item {
-        &:not(:last-child) {
-            margin-right: 15px;
-        }
-    }
-}
-
-// 操作按鈕
-.operateBtn {
-    display: flex;
-    align-items: center;
-
-    button,
-    a {
-        &:not(:last-child) {
-            margin-right: 15px;
-        }
-
-        .icon {
-            margin-right: 5px;
-        }
-    }
-}
-
 // 表格內操作按鈕
 .table_operateBtn {
-    .btn_style {
+    .btn_item {
         &:not(:last-child) {
             margin-right: 15px;
         }
     }
 
-    .vertical_btn {
-        &:not(:last-child) {
-            margin-bottom: 10px;
-        }
-    }
-
-    .text_green {
-        color: $primary-color !important;
-    }
-
-    .text_darkBlue {
-        color: $darkBlue;
+    .text_primary {
+        color: $primary-color;
     }
 
     .text_danger {
@@ -208,58 +106,4 @@
         border: 0;
         background-color: transparent;
     }
-}
-
-
-
-// ------------------
-
-.switch {
-    position: relative;
-    display: inline-block;
-    min-width: unset !important;
-    width: 50px;
-    height: 24px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 2px;
-    top: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked+.slider {
-    background-color: $primary-color;
-}
-
-input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
 }
