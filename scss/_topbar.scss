@@ -23,7 +23,6 @@
         }
 
         .menu_section {
-
             .topbar_menu {
                 display: flex;
                 justify-content: space-around;
@@ -66,7 +65,7 @@
                         position: relative;
 
                         &:hover {
-                            opacity: .8;
+                            opacity: .9;
                         }
 
                         a {
@@ -88,9 +87,10 @@
             justify-content: end;
             align-items: center;
             color: #fff;
+            font-size: 18px;
 
             .signout {
-                margin-left: 15px;
+                margin-left: 20px;
             }
         }
     }

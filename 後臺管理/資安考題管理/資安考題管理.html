@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../plugin/bootstrap-5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../plugin/fontawesome-6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../plugin/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../css/all.css">
     <title>宣教線上管理評量系統</title>
 </head>
@@ -72,38 +73,45 @@
         <div class="contentSection">
             <div class="contentSection_item">
                 <div class="header">
-                    <div class="title">人員資料管理</div>
+                    <div class="title">資安考題管理</div>
                 </div>
                 <div class="content">
                     <div class="content_box">
+                        <div class="content">
+                            <form action="">
+                                <div class="row form_group">
+                                    <div class="col-2">
+                                        <div class="form_item">
+                                            <label for="">檔案上傳</label>
+                                            <div><input type="file"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_btn">
+                                    <button type="submit" class="btn_item btn_primary">匯入</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="content_box">
                         <div class="header">
                             <div class="title">查詢條件</div>
-                            <div class="form_btn">
-                                <a href="新增.html" class="btn_item operateBtn"><i class="fa-solid fa-circle-plus me-1"></i>新增</a>
-                            </div>
                         </div>
                         <div class="content">
                             <form action="">
                                 <div class="row form_group">
                                     <div class="col-2">
                                         <div class="form_item">
-                                            <label for="">單位名稱</label>
-                                            <select name="" id="">
-                                                <option value="">請選擇</option>
-                                                <option value="">後勤處</option>
-                                                <option value="">動管處</option>
-                                            </select>
+                                            <label for="">匯入時間</label>
+                                            <div class="item_range">
+                                                <input type="text" class="form-control datepicker" id="">~
+                                                <input type="text" class="form-control datepicker" id="">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="form_item">
-                                            <label for="">姓名</label>
-                                            <input type="text" class="form-control" id="">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="form_item">
-                                            <label for="">帳號</label>
+                                            <label for="">匯入人</label>
                                             <input type="text" class="form-control" id="">
                                         </div>
                                     </div>
@@ -123,25 +131,16 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th scope="col" width="10%">操作</th>
-                                        <th scope="col">姓名</th>
-                                        <th scope="col">帳號</th>
-                                        <th scope="col">單位名稱</th>
-                                        <th scope="col">職務操作權限</th>
+                                        <th scope="col" width="10%">匯入時間</th>
+                                        <th scope="col">匯入人</th>
+                                        <th scope="col">匯入檔案名稱</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <div class="table_operateBtn text-center">
-                                                <a href="編輯.html" class="btn_item text_primary">編輯</a>
-                                                <button type="button" class="btn_item text_danger">刪除</button>
-                                            </div>
-                                        </td>
-                                        <td>王小明</td>
-                                        <td>admin0123</td>
-                                        <td>後勤處</td>
-                                        <td>機關管理者</td>
+                                        <td>2022-07-04</td>
+                                        <td>王曉明</td>
+                                        <td>資安考題0308.xsl</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -170,9 +169,15 @@
     </section>
 
     <script src="../../plugin/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../plugin/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../plugin/bootstrap-5.2.3/js/bootstrap.min.js"></script>
-
-    
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFormat: 'yy-mm-dd',
+            });
+        });
+    </script>
 </body>
 
 </html>

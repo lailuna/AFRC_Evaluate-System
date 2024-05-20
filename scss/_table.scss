@@ -15,6 +15,14 @@
         padding: 15px;
         border: 1px solid #dde1e3;
         border-radius: 4px;
+
+        a {
+            color: unset;
+
+            &:hover {
+                text-decoration: underline!important;
+            }
+        }
     }
 }
 

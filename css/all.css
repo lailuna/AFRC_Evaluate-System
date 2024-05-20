@@ -138,7 +138,7 @@ table {
 }
 .contentSection_item .header .title {
   font-size: 20px;
-  border-left: 3px solid #0F4C81;
+  border-left: 4px solid #0F4C81;
   padding: 0 10px;
 }
 .contentSection_item .content .content_box {
@@ -387,6 +387,9 @@ label {
   border-radius: 5px;
   padding: 10px;
 }
+.btn_primary:hover {
+  color: #fff;
+}
 
 .btn_primary_gray {
   background-color: #F5F5F5;
@@ -428,16 +431,6 @@ label {
   padding: 8px 15px;
 }
 
-.text_decoration {
-  text-decoration: underline !important;
-}
-
-.btn_upload {
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 .table_operateBtn .btn_item:not(:last-child) {
   margin-right: 15px;
 }
@@ -460,6 +453,12 @@ label {
   padding: 15px;
   border: 1px solid #dde1e3;
   border-radius: 4px;
+}
+.table .tbody_item a {
+  color: unset;
+}
+.table .tbody_item a:hover {
+  text-decoration: underline !important;
 }
 
 .table-bordered {
@@ -526,7 +525,7 @@ label {
   padding: 12px;
 }
 
-.vedio_section {
+.vedio_section, .affidavit_section {
   margin-bottom: 20px;
 }
 
@@ -589,7 +588,7 @@ label {
   position: relative;
 }
 .topbar .topbar_content .menu_section .topbar_menu .secondFloor .secondFloor_item:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .topbar .topbar_content .menu_section .topbar_menu .secondFloor .secondFloor_item a {
   display: block;
@@ -604,9 +603,10 @@ label {
   justify-content: end;
   align-items: center;
   color: #fff;
+  font-size: 18px;
 }
 .topbar .topbar_content .user_data .signout {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .exam_item {

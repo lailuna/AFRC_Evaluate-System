@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../plugin/bootstrap-5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../plugin/fontawesome-6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../plugin/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../css/all.css">
     <title>宣教線上管理評量系統</title>
 </head>
@@ -72,7 +73,7 @@
         <div class="contentSection">
             <div class="contentSection_item">
                 <div class="header">
-                    <div class="title">人員資料管理</div>
+                    <div class="title">通報PDF管理</div>
                 </div>
                 <div class="content">
                     <div class="content_box">
@@ -87,23 +88,16 @@
                                 <div class="row form_group">
                                     <div class="col-2">
                                         <div class="form_item">
-                                            <label for="">單位名稱</label>
-                                            <select name="" id="">
-                                                <option value="">請選擇</option>
-                                                <option value="">後勤處</option>
-                                                <option value="">動管處</option>
-                                            </select>
+                                            <label for="">發布時間</label>
+                                            <div class="item_range">
+                                                <input type="text" class="form-control datepicker" id="">~
+                                                <input type="text" class="form-control datepicker" id="">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="form_item">
-                                            <label for="">姓名</label>
-                                            <input type="text" class="form-control" id="">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="form_item">
-                                            <label for="">帳號</label>
+                                            <label for="">通報編號</label>
                                             <input type="text" class="form-control" id="">
                                         </div>
                                     </div>
@@ -124,10 +118,9 @@
                                 <thead>
                                     <tr>
                                         <th scope="col" width="10%">操作</th>
-                                        <th scope="col">姓名</th>
-                                        <th scope="col">帳號</th>
-                                        <th scope="col">單位名稱</th>
-                                        <th scope="col">職務操作權限</th>
+                                        <th scope="col">發布時間</th>
+                                        <th scope="col">通報編號</th>
+                                        <th scope="col">通報名稱</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -138,10 +131,9 @@
                                                 <button type="button" class="btn_item text_danger">刪除</button>
                                             </div>
                                         </td>
-                                        <td>王小明</td>
-                                        <td>admin0123</td>
-                                        <td>後勤處</td>
-                                        <td>機關管理者</td>
+                                        <td>2022-07-04</td>
+                                        <td>001</td>
+                                        <td>國防部通報111019號提振士氣恪遵規範避免營外餐敘飲酒</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -170,9 +162,15 @@
     </section>
 
     <script src="../../plugin/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../plugin/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../plugin/bootstrap-5.2.3/js/bootstrap.min.js"></script>
-
-    
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFormat: 'yy-mm-dd',
+            });
+        });
+    </script>
 </body>
 
 </html>

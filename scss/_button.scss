@@ -32,6 +32,10 @@
     min-width: 160px;
     border-radius: 5px;
     padding: 10px;
+
+    &:hover{
+        color: #fff;
+    }
 }
 
 .btn_primary_gray {
@@ -77,17 +81,6 @@
     padding: 8px 15px;
 }
 
-// ------------
-
-.text_decoration {
-    text-decoration: underline !important;
-}
-
-// 上傳檔案
-.btn_upload {
-    display: block;
-    width: fit-content;
-}
 
 // 表格內操作按鈕
 .table_operateBtn {

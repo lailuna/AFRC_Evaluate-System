@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../plugin/bootstrap-5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../plugin/fontawesome-6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../plugin/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../css/all.css">
     <title>宣教線上管理評量系統</title>
 </head>
@@ -72,107 +73,57 @@
         <div class="contentSection">
             <div class="contentSection_item">
                 <div class="header">
-                    <div class="title">人員資料管理</div>
+                    <div class="title">通報PDF管理-編輯</div>
                 </div>
                 <div class="content">
-                    <div class="content_box">
-                        <div class="header">
-                            <div class="title">查詢條件</div>
-                            <div class="form_btn">
-                                <a href="新增.html" class="btn_item operateBtn"><i class="fa-solid fa-circle-plus me-1"></i>新增</a>
+                    <form action="">
+                        <div class="form-row form_item">
+                            <div class="col-md-3">
+                                <label for="account"><span class="required">*</span>通報編號</label>
+                                <input type="text" class="form-control w-100" id="account" required>
                             </div>
                         </div>
-                        <div class="content">
-                            <form action="">
-                                <div class="row form_group">
-                                    <div class="col-2">
-                                        <div class="form_item">
-                                            <label for="">單位名稱</label>
-                                            <select name="" id="">
-                                                <option value="">請選擇</option>
-                                                <option value="">後勤處</option>
-                                                <option value="">動管處</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="form_item">
-                                            <label for="">姓名</label>
-                                            <input type="text" class="form-control" id="">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="form_item">
-                                            <label for="">帳號</label>
-                                            <input type="text" class="form-control" id="">
-                                        </div>
-                                    </div>
+                        <div class="form-row form_item">
+                            <div class="col-md-3">
+                                <label for=""><span class="required">*</span>通報名稱</label>
+                                <input type="text" class="form-control w-100" id="" required>
+                            </div>
+                        </div>
+                        <div class="form-row form_item">
+                            <div class="col-md-3">
+                                <label for=""><span class="required">*</span>通報發布時間</label>
+                                <div class="item_range">
+                                    <input type="text" class="form-control datepicker" id="">~
+                                    <input type="text" class="form-control datepicker" id="">
                                 </div>
-                                <div class="form_btn">
-                                    <button type="submit" class="btn_item btn_primary">查詢</button>
-                                    <button type="button" class="btn_item btn_primary_danger">清除</button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="content_box">
-                        <div class="header">
-                            <div class="title">查詢結果</div>
+                        <div class="form-row form_item">
+                            <div class="col-md-3">
+                                <label for=""><span class="required">*</span>檔案上傳</label>
+                                <div><input type="file"></div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" width="10%">操作</th>
-                                        <th scope="col">姓名</th>
-                                        <th scope="col">帳號</th>
-                                        <th scope="col">單位名稱</th>
-                                        <th scope="col">職務操作權限</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="table_operateBtn text-center">
-                                                <a href="編輯.html" class="btn_item text_primary">編輯</a>
-                                                <button type="button" class="btn_item text_danger">刪除</button>
-                                            </div>
-                                        </td>
-                                        <td>王小明</td>
-                                        <td>admin0123</td>
-                                        <td>後勤處</td>
-                                        <td>機關管理者</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <nav aria-label="Page navigation">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                        <div class="form_btn">
+                            <button type="submit" class="btn_item btn_primary">儲存</button>
+                            <a href="通報PDF管理.html" class="btn_item btn_primary_gray">返回</a>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <script src="../../plugin/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../../plugin/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../plugin/bootstrap-5.2.3/js/bootstrap.min.js"></script>
-
-    
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFormat: 'yy-mm-dd',
+            });
+        });
+    </script>
 </body>
 
 </html>
