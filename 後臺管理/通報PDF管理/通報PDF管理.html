@@ -128,7 +128,8 @@
                                         <td>
                                             <div class="table_operateBtn text-center">
                                                 <a href="編輯.html" class="btn_item text_primary">編輯</a>
-                                                <button type="button" class="btn_item text_danger">刪除</button>
+                                                <button type="button" class="btn_item text_danger" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop">刪除</button>
                                             </div>
                                         </td>
                                         <td>2022-07-04</td>
@@ -154,6 +155,25 @@
                                     </li>
                                 </ul>
                             </nav>
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header border-0">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-center">確定執行刪除?</div>
+                                        <div class="modal-footer border-0 justify-content-center">
+                                            <button type="button" class="btn_item btn_primary_gray"
+                                            data-bs-dismiss="modal">取消</button>
+                                            <button type="button" class="btn_item btn_primary"
+                                                data-bs-dismiss="modal">確定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -72,78 +72,87 @@
         <div class="contentSection">
             <div class="contentSection_item">
                 <div class="header">
-                    <div class="title">軍網帳號異動申請單</div>
+                    <div class="title">職務操作權限管理-編輯</div>
                 </div>
                 <div class="content">
                     <form action="">
                         <div class="form-row form_item">
-                            <div class="col-md-4">
-                                <div class="radio_section">
-                                    <div class="radio_inline">
-                                        <div class="radio_item">
-                                            <input type="radio" id="add" name="enable">
-                                            <label for="add">新增</label>
-                                        </div>
-                                        <div class="radio_item">
-                                            <input type="radio" id="delete" name="enable">
-                                            <label for="delete">刪除</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
                             <div class="col-md-3">
-                                <label for="unit">單位</label>
-                                <input type="text" class="form-control w-100" id="unit">
+                                <label for=""><span class="required">*</span>職務操作權限名稱</label>
+                                <input type="text" class="form-control w-100" id="" value="單位管理者" required>
                             </div>
                         </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="job">職務階級</label>
-                                <input type="text" class="form-control w-100" id="job">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="name">姓名</label>
-                                <input type="text" class="form-control w-100" id="name">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="account">帳號</label>
-                                <input type="text" class="form-control w-100" id="account">
-                            </div>
-                        </div>
-                        <div class="form-row form_item">
-                            <div class="col-md-3">
-                                <label for="reason">原因</label>
-                                <input type="text" class="form-control w-100" id="reason">
-                            </div>
-                        </div>
+                        <table class="table table-bordered w-50">
+                            <thead>
+                                <tr>
+                                    <th scope="col">功能名稱</th>
+                                    <th scope="col" width="20%">選單權限</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>首頁</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">新進人員資安教育專區</td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">資安測驗</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">資安教育影片</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">保密切結書下載</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">軍網帳號異動申請單</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">民網帳號異動申請單</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">後臺管理</td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">人員資料管理</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">職務操作權限管理</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">最新消息管理</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">通報PDF管理</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">新進人員分析</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">通報成效統計</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="category_sub">資安考題管理</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="form_btn">
-                            <button type="button" class="btn_item btn_primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">儲存</button>
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header border-0">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body text-center">
-                                            儲存成功
-                                        </div>
-                                        <div class="modal-footer border-0 justify-content-center">
-                                            <button type="button" class="btn_item btn_primary"
-                                                data-bs-dismiss="modal">確定</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn_item btn_primary">儲存</button>
+                            <a href="職務操作權限管理.html" class="btn_item btn_primary_gray">返回</a>
                         </div>
                     </form>
                 </div>

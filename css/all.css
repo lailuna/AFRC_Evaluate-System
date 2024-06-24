@@ -473,6 +473,10 @@ label {
   background-color: #fff;
 }
 
+.category_sub {
+  text-indent: 4rem;
+}
+
 .login_bg {
   background: url(../img/login_bg.png) no-repeat center;
   background-size: cover;
